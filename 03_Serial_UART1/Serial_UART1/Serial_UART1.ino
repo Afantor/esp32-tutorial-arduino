@@ -1,5 +1,5 @@
-/*
-  Serial for UART2
+﻿/*
+  Serial for UART1
 我们使用“ HardwareSerial ”类进行串行通信。它有一些重要的接口：
 - HardwareSerial（int uart_nr）：这是HardwareSerial的构造函数，其中uart_nr为0,1或2，所以我们有最多3个串行端口。
 
@@ -16,34 +16,34 @@
   http://
 */
 
-HardwareSerial Serial2(2);
+HardwareSerial Serial1(1);
 
-int8_t U2rxPin = 16;
-int8_t U2txPin = 17;
+int8_t U1rxPin = 16;
+int8_t U1txPin = 17;
 
 char inByte = 0;         // incoming serial byte
 // the setup routine runs once when you press reset:
 void setup() 
 {
   // initialize serial communication at 115200 bits per second:
-  Serial2.begin(115200,SERIAL_8N1,U2rxPin,U2txPin);
-  while (!Serial2) 
+  Serial1.begin(115200,SERIAL_8N1,U1rxPin,U1txPin);
+  while (!Serial1) 
   {
     ; // wait for serial port to connect. Needed for native USB port only
   }
   // serial print hello world.
-  Serial2.println("Hello world!");
+  Serial1.println("Hello world!");
 }
 
 // the loop routine runs over and over again forever:
 void loop() 
 {
   // print out the value if Serial available.
-  if (Serial2.available() > 0) 
+  if (Serial1.available() > 0) 
   {
     // get incoming byte:
-    inByte = Serial2.read();
+    inByte = Serial1.read();
     // send back values:
-    Serial2.write(inByte);
+    Serial1.write(inByte);
   }
 }
