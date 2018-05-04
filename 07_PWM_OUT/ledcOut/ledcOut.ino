@@ -1,9 +1,8 @@
-***************************************************** 
+/***************************************************** 
 * ESP32 Analog Input/Output Test 
 * Analog Input: ADC_1_0 pin ==> GPIO36 (VP).
-* PWM LED pin   ==> GPIO 02
+*               PWM LED pin ==> GPIO02
 * 
-* MJRoBot.org 6Sept17
 *****************************************************/
 //Analog Input
 #define ANALOG_PIN_0 36

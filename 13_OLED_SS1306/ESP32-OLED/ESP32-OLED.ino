@@ -20,7 +20,8 @@ void setup()
 
 void loop()
 {   
-  if (Serial.available()) {
+  if (Serial.available()) 
+  {
     oled.clearDisplay();
     oled.setTextXY(4,6);  
     oled.putString(Serial.readString());

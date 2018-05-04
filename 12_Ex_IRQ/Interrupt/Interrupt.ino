@@ -5,7 +5,8 @@ byte interruptPin = 12;
 /* hold the state of LED when toggling */
 volatile byte state = LOW;
 
-void setup() {
+void setup() 
+{
   pinMode(ledPin, OUTPUT);
   /* set the interrupt pin as input pullup*/
   pinMode(interruptPin, INPUT_PULLUP);
@@ -15,11 +16,14 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(interruptPin), blink, CHANGE);
 }
 
-void loop() {
+void loop() 
+{
+
 }
 
 /* interrupt function toggle the LED */
-void blink() {
+void blink() 
+{
   state = !state;
   digitalWrite(ledPin, state);
 }

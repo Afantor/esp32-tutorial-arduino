@@ -1,5 +1,5 @@
 //YWROBOT
-//Compatible with the Arduino IDE 1.0
+//Compatible with the Arduino IDE 1.8.5
 //Library version:1.1
 #include <Wire.h> 
 #include "LiquidCrystal_I2C.h"

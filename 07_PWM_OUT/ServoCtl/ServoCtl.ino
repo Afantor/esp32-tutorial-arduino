@@ -1,9 +1,8 @@
 /***************************************************** 
 * ESP32 Servo Control 
 * Analog Input: ADC_1_0 pin ==> GPIO36 (VP).
-* PWM SERVO pin   ==> GPIO 05
+*             PWM SERVO pin ==> GPIO 05
 * 
-* MJRoBot.org 6Sept17
 *****************************************************/
 //Analog Input
 #define ANALOG_PIN_0 36
